@@ -1,0 +1,14 @@
+- name: install lamp stack
+  sudo: yes
+  apt: name={{ item }} state=present update_cache=yes
+  with_items:
+    - apache2
+    - apache2-bin
+    - apache2-utils
+    - libapache2-mod-php7.2
+    - mysql-server
+    - php7.2
+    - php7.2-fpm
+    - php7.2-common
+    - php7.2-cgi
+    - php7.2-mysql

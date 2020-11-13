@@ -1,0 +1,8 @@
+- hosts: envs
+  remote_user: ubuntu
+  vars_files:
+  - group_vars/envs
+  - group_vars/prod
+  - group_vars/uat
+  roles:
+    - web
